@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinlac, Marcial Jr C. - Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Montserrat & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #173e45;
+        }
+
+        /* Tech Circuit Grid & Node Network Pattern Background */
+        .tech-bg {
+            background-color: #184149;
+            background-image: 
+                radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 85% 80%, rgba(0, 0, 0, 0.15) 0%, transparent 40%),
+                linear-gradient(to bottom right, #1d4d57, #13343c);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* SVG Circuit Overlay */
+        .circuit-overlay {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.18;
+            pointer-events: none;
+        }
+
+        /* Double-line frame aesthetic matching Canva design */
+        .photo-frame-wrapper {
+            position: relative;
+            padding: 14px;
+        }
+
+        /* Outer offset border line */
+        .photo-frame-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 1.5px solid rgba(255, 255, 255, 0.6);
+            pointer-events: none;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        /* Hover animation effect */
+        .photo-container:hover .photo-frame-wrapper::before {
+            transform: scale(1.02);
+            border-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .photo-inner-box {
+            border: 10px solid #ffffff;
+            box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.4);
+            background-color: #ffffff;
+        }
+
+        .custom-underline {
+            display: inline-block;
+            position: relative;
+        }
+
+        .custom-underline::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 100%;
+            height: 2px;
+            background-color: #ffffff;
+        }
+
+        .custom-underline-sm::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+            width: 100%;
+            height: 1.5px;
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body class="min-h-screen text-white flex items-center justify-center p-4 sm:p-8 md:p-12">
+
+    <!-- Main Presentation Slide Canvas Container -->
+    <main class="tech-bg w-full max-w-6xl rounded-lg shadow-2xl relative flex items-center min-h-[600px] my-auto border border-teal-800/40">
+        
+        <!-- Tech Circuit Line Graphics SVG Overlay -->
+        <svg class="circuit-overlay" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <defs>
+                <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+                    <circle cx="30" cy="30" r="1.5" fill="#ffffff" opacity="0.4"/>
+                    <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.15"/>
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)" />
+            
+            <!-- Abstract circuit nodes and connecting lines matching background design -->
+            <g stroke="#ffffff" stroke-width="1" fill="none" opacity="0.25">
+                <path d="M 50 100 L 150 100 L 200 150 L 200 300" />
+                <circle cx="50" cy="100" r="4" fill="#ffffff"/>
+                <circle cx="200" cy="300" r="4" fill="#ffffff"/>
+
+                <path d="M 800 80 L 950 80 L 1000 130" />
+                <circle cx="800" cy="80" r="3" fill="#ffffff"/>
+
+                <path d="M 700 500 L 850 500 L 900 450 L 1050 450" />
+                <circle cx="700" cy="500" r="4" fill="#ffffff"/>
+                <circle cx="1050" cy="450" r="4" fill="#ffffff"/>
+
+                <path d="M 100 450 L 250 450 L 300 500" />
+                <circle cx="100" cy="450" r="3" fill="#ffffff"/>
+            </g>
+        </svg>
+
+        <!-- Top Right Tech Icon Silhouette Subtle Decor -->
+        <div class="absolute top-6 right-8 opacity-20 pointer-events-none hidden sm:block">
+            <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+            </svg>
+        </div>
+
+        <!-- Content Layout Grid -->
+        <div class="relative z-10 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center p-8 sm:p-12 md:p-16 w-full">
+            
+            <!-- Left Side: Framed Portrait Photo -->
+            <div class="md:col-span-5 flex justify-center md:justify-end photo-container">
+                <div class="photo-frame-wrapper max-w-[340px] sm:max-w-[380px] w-full">
+                    <div class="photo-inner-box overflow-hidden">
+                        <!-- Direct high-res photo element -->
+                        <div class="w-full h-[360px] sm:h-[420px] overflow-hidden relative flex items-center justify-center bg-gray-100">
+                            <img 
+                                src="Gemini_Generated_Image_gp00vcgp00vcgp00.jpeg" 
+                                alt="Pinlac, Marcial Jr C." 
+                                class="w-full h-full object-cover object-top"
+                                onerror="this.onerror=null; this.src='https://placehold.co/400x500/184149/ffffff?text=Marcial+Pinlac+Jr';"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Header & Bio Text Content -->
+            <div class="md:col-span-7 flex flex-col justify-center space-y-6 text-left">
+                
+                <!-- Main Header Title -->
+                <div>
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-2 leading-tight">
+                        <span class="custom-underline">Pinlac, Marcial Jr C.</span>
+                    </h1>
+                </div>
+
+                <!-- Subtitle / Field -->
+                <div>
+                    <h2 class="text-lg sm:text-xl md:text-2xl font-bold tracking-wide text-white">
+                        <span class="custom-underline-sm">Information Technology</span>
+                    </h2>
+                </div>
+
+                <!-- Bio Paragraph -->
+                <p class="text-sm sm:text-base md:text-[1.05rem] text-gray-100 font-normal leading-relaxed text-justify max-w-2xl tracking-normal opacity-95">
+                    First-year BS Information Technology student at the University of the Cordilleras with a strong foundation and passion for software development. Eager to leverage modern technologies and algorithmic problem-solving to build innovative, user-centric solutions. Dedicated to continuous learning, collaborative development, and evolving into a high-impact software engineer.
+                </p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+</html>
