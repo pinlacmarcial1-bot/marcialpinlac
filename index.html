@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pinlac, Marcial Jr C. - Portfolio</title>
+    <title>Pinlac, Marcial Jr C. - Profile</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Montserrat & Inter -->
@@ -94,7 +94,15 @@
         }
     </style>
 </head>
-<body class="min-h-screen text-white flex items-center justify-center p-4 sm:p-8 md:p-12">
+<body class="min-h-screen text-white flex flex-col items-center justify-center p-4 sm:p-8 md:p-12">
+
+    <!-- Top Navigation Menu (Profile, About Me, Achievements, Family) -->
+    <nav class="w-full max-w-6xl mb-6 flex justify-center space-x-3 sm:space-x-6 text-sm sm:text-base font-semibold">
+        <a href="index.html" class="px-4 py-2 rounded-md bg-teal-700 text-white border border-teal-400 transition shadow">Profile</a>
+        <a href="about.html" class="px-4 py-2 rounded-md bg-teal-900/60 hover:bg-teal-700/80 border border-teal-500/30 transition">About Me</a>
+        <a href="achievements.html" class="px-4 py-2 rounded-md bg-teal-900/60 hover:bg-teal-700/80 border border-teal-500/30 transition">Achievements</a>
+        <a href="family.html" class="px-4 py-2 rounded-md bg-teal-900/60 hover:bg-teal-700/80 border border-teal-500/30 transition">Family</a>
+    </nav>
 
     <!-- Main Presentation Slide Canvas Container -->
     <main class="tech-bg w-full max-w-6xl rounded-lg shadow-2xl relative flex items-center min-h-[600px] my-auto border border-teal-800/40">
@@ -171,9 +179,9 @@
                     </h2>
                 </div>
 
-                <!-- Bio Paragraph -->
+                <!-- Bio Paragraph with Clickable Words linking to the other pages -->
                 <p class="text-sm sm:text-base md:text-[1.05rem] text-gray-100 font-normal leading-relaxed text-justify max-w-2xl tracking-normal opacity-95">
-                    First-year BS Information Technology student at the University of the Cordilleras with a strong foundation and passion for software development. Eager to leverage modern technologies and algorithmic problem-solving to build innovative, user-centric solutions. Dedicated to continuous learning, collaborative development, and evolving into a high-impact software engineer.
+                    First-year BS Information Technology student at the University of the Cordilleras. Read more <a href="about.html" class="text-teal-300 underline font-semibold hover:text-white">about me</a>, check out my <a href="achievements.html" class="text-teal-300 underline font-semibold hover:text-white">achievements</a>, or view pictures and information dedicated to my <a href="family.html" class="text-teal-300 underline font-semibold hover:text-white">family</a>. Eager to learn, build innovative solutions, and evolve into a high-impact software engineer.
                 </p>
 
             </div>
