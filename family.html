@@ -4,8 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Family - Portfolio Section</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <!-- Google Fonts for formal typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
         * {
             box-sizing: border-box;
@@ -17,11 +24,7 @@
             font-family: 'Plus Jakarta Sans', sans-serif;
             background-color: #0b1a20;
             color: #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             min-height: 100vh;
-            padding: 40px 20px;
         }
 
         .family-container {
@@ -181,8 +184,25 @@
         }
     </style>
 </head>
-<body>
+<body class="flex flex-col items-center justify-center p-6 md:p-10 relative">
 
+    <!-- NAVIGATION MENU -->
+    <nav class="w-full max-w-[900px] flex justify-end gap-3 font-semibold mb-6 z-20">
+        <a href="index.html" class="px-4 py-2 rounded-lg bg-slate-800 text-teal-300 hover:bg-teal-700 hover:text-white transition-all">
+            Profile
+        </a>
+        <a href="about.html" class="px-4 py-2 rounded-lg bg-slate-800 text-teal-300 hover:bg-teal-700 hover:text-white transition-all">
+            About Me
+        </a>
+        <a href="achievements.html" class="px-4 py-2 rounded-lg bg-slate-800 text-teal-300 hover:bg-teal-700 hover:text-white transition-all">
+            Achievements
+        </a>
+        <a href="family.html" class="px-4 py-2 rounded-lg bg-sky-500 text-slate-900 border border-sky-300 font-bold">
+            Family
+        </a>
+    </nav>
+
+    <!-- FAMILY CONTAINER -->
     <div class="family-container">
         <!-- Upper Middle Header -->
         <div class="family-header">
