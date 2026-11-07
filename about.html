@@ -6,366 +6,230 @@
 
 <title>About Me - IT Portfolio</title>
 
+<!-- Tailwind CSS -->
 <script src="https://cdn.tailwindcss.com"></script>
 
+<!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
 
 <style>
 
 body{
-
-font-family:'Montserrat',sans-serif;
-background:#0b1727;
-
+    font-family:'Montserrat',sans-serif;
+    background:#0b1727;
 }
-
 
 /* MAIN CARD */
-
 .portfolio-card{
-
-background:#ffffff;
-border-radius:25px;
-overflow:hidden;
-box-shadow:0 25px 50px rgba(0,0,0,.35);
-
+    background:#ffffff;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 25px 50px rgba(0,0,0,.35);
 }
-
-
 
 /* TECH SIDE */
-
 .side-line{
-
-width:12px;
-background:linear-gradient(#00d4ff,#174852);
+    width:12px;
+    background:linear-gradient(#00d4ff,#174852);
 }
-
-
 
 /* HEADER */
-
 .title{
-
-font-size:45px;
-font-weight:800;
-color:#0f3440;
-letter-spacing:2px;
-
+    font-size:45px;
+    font-weight:800;
+    color:#0f3440;
+    letter-spacing:2px;
 }
-
 
 .subtitle{
-
-color:#00a8c6;
-font-weight:600;
-font-size:14px;
-letter-spacing:3px;
-
+    color:#00a8c6;
+    font-weight:600;
+    font-size:14px;
+    letter-spacing:3px;
 }
-
-
 
 /* SECTION */
-
 .section-title{
-
-font-size:22px;
-font-weight:700;
-color:#123b46;
-margin-bottom:15px;
-
+    font-size:22px;
+    font-weight:700;
+    color:#123b46;
+    margin-bottom:15px;
 }
-
-
 
 .text-content{
-
-font-size:15px;
-line-height:1.8;
-color:#333;
-text-align:justify;
-
+    font-size:15px;
+    line-height:1.8;
+    color:#333;
+    text-align:justify;
 }
-
-
 
 /* TERMINAL BOX */
-
-
 .terminal{
-
-background:#101820;
-color:#d8faff;
-padding:25px;
-border-radius:15px;
-font-family:monospace;
-box-shadow:0 10px 20px rgba(0,0,0,.2);
-
+    background:#101820;
+    color:#d8faff;
+    padding:25px;
+    border-radius:15px;
+    font-family:monospace;
+    box-shadow:0 10px 20px rgba(0,0,0,.2);
 }
-
-
 
 .circle{
-
-height:12px;
-width:12px;
-border-radius:50%;
-background:#00d4ff;
-display:inline-block;
-margin-right:6px;
-
+    height:12px;
+    width:12px;
+    border-radius:50%;
+    background:#00d4ff;
+    display:inline-block;
+    margin-right:6px;
 }
-
-
 
 /* SKILLS */
-
-
 .skill-card{
-
-background:#f1f8fa;
-border:1px solid #d5edf2;
-border-left:5px solid #00a8c6;
-padding:18px;
-border-radius:12px;
-margin-bottom:15px;
-
-transition:.3s;
-
+    background:#f1f8fa;
+    border:1px solid #d5edf2;
+    border-left:5px solid #00a8c6;
+    padding:18px;
+    border-radius:12px;
+    margin-bottom:15px;
+    transition:.3s;
 }
-
 
 .skill-card:hover{
-
-transform:translateX(8px);
-
+    transform:translateX(8px);
 }
-
-
 
 .skill-title{
-
-font-size:18px;
-font-weight:700;
-color:#123b46;
-
+    font-size:18px;
+    font-weight:700;
+    color:#123b46;
 }
-
-
 
 /* TECH TAGS */
-
-
 .tag{
-
-display:inline-block;
-background:#123b46;
-color:white;
-padding:6px 12px;
-border-radius:20px;
-font-size:13px;
-margin:5px;
-
+    display:inline-block;
+    background:#123b46;
+    color:white;
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:13px;
+    margin:5px;
 }
 
-
-
 </style>
-
 </head>
 
+<body class="min-h-screen flex flex-col items-center justify-center p-6 md:p-10 relative">
 
+<!-- NAVIGATION MENU -->
+<nav class="w-full max-w-6xl flex justify-end gap-3 font-semibold mb-6 z-20">
+    <a href="index.html" class="px-4 py-2 rounded-lg bg-slate-800 text-teal-300 hover:bg-teal-700 hover:text-white transition-all">
+        Profile
+    </a>
+    <a href="about.html" class="px-4 py-2 rounded-lg bg-teal-500 text-slate-900 border border-teal-300 font-bold">
+        About Me
+    </a>
+    <a href="achievements.html" class="px-4 py-2 rounded-lg bg-slate-800 text-teal-300 hover:bg-teal-700 hover:text-white transition-all">
+        Achievements
+    </a>
+    <a href="family.html" class="px-4 py-2 rounded-lg bg-slate-800 text-teal-300 hover:bg-teal-700 hover:text-white transition-all">
+        Family
+    </a>
+</nav>
 
-<body class="min-h-screen flex items-center justify-center p-10">
-
-
+<!-- MAIN CONTENT CARD -->
 <div class="portfolio-card max-w-6xl w-full flex">
 
+    <div class="side-line"></div>
 
-<div class="side-line"></div>
+    <div class="p-8 md:p-12 w-full">
 
+        <!-- HEADER -->
+        <p class="subtitle mb-3">
+        IT STUDENT PORTFOLIO // PROFILE
+        </p>
 
+        <h1 class="title">
+        ABOUT ME
+        </h1>
 
-<div class="p-12 w-full">
+        <p class="text-gray-500 mt-3">
+        Building solutions through technology, creativity, and continuous learning.
+        </p>
 
+        <div class="grid md:grid-cols-2 gap-12 mt-10">
 
+            <!-- LEFT -->
+            <div>
+                <h2 class="section-title">
+                1. Profile
+                </h2>
 
-<!-- HEADER -->
+                <div class="terminal">
+                    <div class="mb-5">
+                        <span class="circle"></span>
+                        <span class="circle"></span>
+                        <span class="circle"></span>
+                    </div>
 
-<p class="subtitle mb-3">
-IT STUDENT PORTFOLIO // PROFILE
-</p>
+                    <p>> user.profile = "Marcial"</p>
+                    <p>> course = "BS Information Technology"</p>
+                    <p>> focus = "Software Development"</p>
+                    <p>> status = "Learning & Building"</p>
+                </div>
 
+                <p class="text-content mt-6">
+                First-year BS Information Technology student at the University of the Cordilleras with a strong foundation and passion for software development. Eager to leverage modern technologies and algorithmic problem-solving to build innovative, user-centered solutions. Dedicated to continuous learning, collaborative development, and evolving into a high-impact software engineer.
+                </p>
 
-<h1 class="title">
-ABOUT ME
-</h1>
+                <div class="mt-5">
+                    <span class="tag">Java</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">Problem Solving</span>
+                </div>
+            </div>
 
+            <!-- RIGHT -->
+            <div>
+                <h2 class="section-title">
+                02. What I Bring
+                </h2>
 
-<p class="text-gray-500 mt-3">
-Building solutions through technology, creativity, and continuous learning.
-</p>
+                <div class="skill-card">
+                    <h3 class="skill-title">
+                    ♟ Strategic Thinking
+                    </h3>
+                    <p class="text-content">
+                    I engage in chess to improve my logical thinking, decision-making skills, and ability to analyze complex situations.
+                    </p>
+                </div>
 
+                <div class="skill-card">
+                    <h3 class="skill-title">
+                    🎬 Digital Creativity
+                    </h3>
+                    <p class="text-content">
+                    I practice video editing to improve my creativity, technical skills, and understanding of digital media production.
+                    </p>
+                </div>
 
+                <div class="skill-card">
+                    <h3 class="skill-title">
+                    ⚽ Teamwork & Discipline
+                    </h3>
+                    <p class="text-content">
+                    I participate in sports activities to develop teamwork, discipline, communication, and personal growth.
+                    </p>
+                </div>
+            </div>
 
-<div class="grid md:grid-cols-2 gap-12 mt-10">
+        </div>
 
-
-
-<!-- LEFT -->
-
-
-<div>
-
-
-<h2 class="section-title">
-01. Profile
-</h2>
-
-
-<div class="terminal">
-
-
-<div class="mb-5">
-
-<span class="circle"></span>
-<span class="circle"></span>
-<span class="circle"></span>
-
-</div>
-
-
-<p>
-> user.profile = "Marcial"
-</p>
-
-<p>
-> course = "BS Information Technology"
-</p>
-
-<p>
-> focus = "Software Development"
-</p>
-
-<p>
-> status = "Learning & Building"
-</p>
-
-
-</div>
-
-
-
-<p class="text-content mt-6">
-
-First-year BS Information Technology student at the University of the Cordilleras with a strong foundation and passion for software development. Eager to leverage modern technologies and algorithmic problem-solving to build innovative, user-centered solutions. Dedicated to continuous learning, collaborative development, and evolving into a high-impact software engineer.
-
-</p>
-
-
-
-<div class="mt-5">
-
-<span class="tag">Java</span>
-<span class="tag">Python</span>
-<span class="tag">HTML</span>
-<span class="tag">CSS</span>
-<span class="tag">Problem Solving</span>
+    </div>
 
 </div>
-
-
-
-</div>
-
-
-
-
-
-<!-- RIGHT -->
-
-
-<div>
-
-
-<h2 class="section-title">
-02. What I Bring
-</h2>
-
-
-
-<div class="skill-card">
-
-<h3 class="skill-title">
-♟ Strategic Thinking
-</h3>
-
-
-<p class="text-content">
-
-I engage in chess to improve my logical thinking, decision-making skills, and ability to analyze complex situations.
-
-</p>
-
-
-</div>
-
-
-
-
-<div class="skill-card">
-
-<h3 class="skill-title">
-🎬 Digital Creativity
-</h3>
-
-
-<p class="text-content">
-
-I practice video editing to improve my creativity, technical skills, and understanding of digital media production.
-
-</p>
-
-
-</div>
-
-
-
-
-<div class="skill-card">
-
-<h3 class="skill-title">
-⚽ Teamwork & Discipline
-</h3>
-
-
-<p class="text-content">
-
-I participate in sports activities to develop teamwork, discipline, communication, and personal growth.
-
-</p>
-
-
-</div>
-
-
-
-</div>
-
-
-</div>
-
-
-</div>
-
-
-</div>
-
 
 </body>
 </html>
