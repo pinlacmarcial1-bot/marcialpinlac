@@ -4,88 +4,172 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>About Me - Portfolio</title>
+<title>About Me - IT Portfolio</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 
 <style>
 
 body{
-    font-family:'Montserrat',sans-serif;
-    background:#eef2f3;
+
+font-family:'Montserrat',sans-serif;
+background:#0b1727;
+
 }
 
+
+/* MAIN CARD */
 
 .portfolio-card{
 
-    background:white;
-    border-radius:20px;
-    box-shadow:0 20px 40px rgba(0,0,0,.15);
-    overflow:hidden;
+background:#ffffff;
+border-radius:25px;
+overflow:hidden;
+box-shadow:0 25px 50px rgba(0,0,0,.35);
 
 }
 
+
+
+/* TECH SIDE */
 
 .side-line{
 
-    width:10px;
-    background:#174852;
-    height:100%;
-
+width:12px;
+background:linear-gradient(#00d4ff,#174852);
 }
 
+
+
+/* HEADER */
 
 .title{
 
-    font-size:42px;
-    font-weight:800;
-    color:#174852;
-    letter-spacing:1px;
+font-size:45px;
+font-weight:800;
+color:#0f3440;
+letter-spacing:2px;
 
 }
 
+
+.subtitle{
+
+color:#00a8c6;
+font-weight:600;
+font-size:14px;
+letter-spacing:3px;
+
+}
+
+
+
+/* SECTION */
 
 .section-title{
 
-    font-size:22px;
-    font-weight:700;
-    color:#174852;
-    margin-bottom:15px;
+font-size:22px;
+font-weight:700;
+color:#123b46;
+margin-bottom:15px;
 
 }
 
-
-.skill-card{
-
-    background:#f4f8f9;
-    border-left:5px solid #174852;
-    padding:18px;
-    border-radius:10px;
-    margin-bottom:18px;
-
-}
-
-
-.skill-title{
-
-    font-size:18px;
-    font-weight:700;
-    color:#173e45;
-
-}
 
 
 .text-content{
 
-    font-size:16px;
-    line-height:1.8;
-    color:#333;
-    text-align:justify;
+font-size:15px;
+line-height:1.8;
+color:#333;
+text-align:justify;
+
+}
+
+
+
+/* TERMINAL BOX */
+
+
+.terminal{
+
+background:#101820;
+color:#d8faff;
+padding:25px;
+border-radius:15px;
+font-family:monospace;
+box-shadow:0 10px 20px rgba(0,0,0,.2);
+
+}
+
+
+
+.circle{
+
+height:12px;
+width:12px;
+border-radius:50%;
+background:#00d4ff;
+display:inline-block;
+margin-right:6px;
+
+}
+
+
+
+/* SKILLS */
+
+
+.skill-card{
+
+background:#f1f8fa;
+border:1px solid #d5edf2;
+border-left:5px solid #00a8c6;
+padding:18px;
+border-radius:12px;
+margin-bottom:15px;
+
+transition:.3s;
+
+}
+
+
+.skill-card:hover{
+
+transform:translateX(8px);
+
+}
+
+
+
+.skill-title{
+
+font-size:18px;
+font-weight:700;
+color:#123b46;
+
+}
+
+
+
+/* TECH TAGS */
+
+
+.tag{
+
+display:inline-block;
+background:#123b46;
+color:white;
+padding:6px 12px;
+border-radius:20px;
+font-size:13px;
+margin:5px;
 
 }
 
@@ -96,13 +180,12 @@ body{
 </head>
 
 
+
 <body class="min-h-screen flex items-center justify-center p-10">
 
 
 <div class="portfolio-card max-w-6xl w-full flex">
 
-
-<!-- SIDE DESIGN -->
 
 <div class="side-line"></div>
 
@@ -111,31 +194,66 @@ body{
 <div class="p-12 w-full">
 
 
+
 <!-- HEADER -->
 
-<h1 class="title mb-10">
-    ABOUT ME
+<p class="subtitle mb-3">
+IT STUDENT PORTFOLIO // PROFILE
+</p>
+
+
+<h1 class="title">
+ABOUT ME
 </h1>
 
 
+<p class="text-gray-500 mt-3">
+Building solutions through technology, creativity, and continuous learning.
+</p>
 
-<div class="grid md:grid-cols-2 gap-12">
 
 
-<!-- ABOUT ME SECTION -->
+<div class="grid md:grid-cols-2 gap-12 mt-10">
+
+
+
+<!-- LEFT -->
+
 
 <div>
 
 
 <h2 class="section-title">
-Profile
+01. Profile
 </h2>
 
 
-<p class="text-content">
+<div class="terminal">
 
-First-year BS Information Technology student at the University of the Cordilleras with a strong foundation and passion for software development. Eager to leverage modern technologies and algorithmic problem-solving to build innovative, user-centric solutions. Dedicated to continuous learning, collaborative development, and evolving into a high-impact software engineer.
 
+<div class="mb-5">
+
+<span class="circle"></span>
+<span class="circle"></span>
+<span class="circle"></span>
+
+</div>
+
+
+<p>
+> user.profile = "Marcial"
+</p>
+
+<p>
+> course = "BS Information Technology"
+</p>
+
+<p>
+> focus = "Software Development"
+</p>
+
+<p>
+> status = "Learning & Building"
 </p>
 
 
@@ -143,29 +261,54 @@ First-year BS Information Technology student at the University of the Cordillera
 
 
 
+<p class="text-content mt-6">
 
-<!-- WHAT I BRING SECTION -->
+First-year BS Information Technology student at the University of the Cordilleras with a strong foundation and passion for software development. Eager to leverage modern technologies and algorithmic problem-solving to build innovative, user-centered solutions. Dedicated to continuous learning, collaborative development, and evolving into a high-impact software engineer.
+
+</p>
+
+
+
+<div class="mt-5">
+
+<span class="tag">Java</span>
+<span class="tag">Python</span>
+<span class="tag">HTML</span>
+<span class="tag">CSS</span>
+<span class="tag">Problem Solving</span>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<!-- RIGHT -->
+
 
 <div>
 
 
 <h2 class="section-title">
-What I Bring
+02. What I Bring
 </h2>
 
 
 
 <div class="skill-card">
 
-
 <h3 class="skill-title">
-♟ Playing Chess
+♟ Strategic Thinking
 </h3>
 
 
 <p class="text-content">
 
-I engage in chess as a way to enhance my strategic thinking, decision-making skills, and ability to analyze different situations.
+I engage in chess to improve my logical thinking, decision-making skills, and ability to analyze complex situations.
 
 </p>
 
@@ -177,36 +320,33 @@ I engage in chess as a way to enhance my strategic thinking, decision-making ski
 
 <div class="skill-card">
 
-
 <h3 class="skill-title">
-🎬 Video Editing
+🎬 Digital Creativity
 </h3>
 
 
 <p class="text-content">
 
-I practice video editing to develop my creativity, technical skills, and understanding of digital media production.
+I practice video editing to improve my creativity, technical skills, and understanding of digital media production.
 
 </p>
 
 
 </div>
-
 
 
 
 
 <div class="skill-card">
 
-
 <h3 class="skill-title">
-⚽ Playing Sports
+⚽ Teamwork & Discipline
 </h3>
 
 
 <p class="text-content">
 
-I participate in sports activities to promote physical fitness, teamwork, discipline, and personal growth.
+I participate in sports activities to develop teamwork, discipline, communication, and personal growth.
 
 </p>
 
@@ -225,7 +365,6 @@ I participate in sports activities to promote physical fitness, teamwork, discip
 
 
 </div>
-
 
 
 </body>
