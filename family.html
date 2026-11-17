@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Family - Portfolio Section</title>
+    <title>My Family and Friends - Portfolio Section</title>
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -114,6 +114,12 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
 
+        /* Full width style for the middle card to center it nicely underneath */
+        .family-card.full-width {
+            max-width: 500px;
+            flex-basis: 100%;
+        }
+
         .family-card:hover {
             transform: translateY(-8px);
             background: rgba(255, 255, 255, 0.05);
@@ -192,13 +198,13 @@
             Profile
         </a>
         <a href="about.html" class="px-4 py-2 rounded-lg bg-slate-800 text-teal-300 hover:bg-teal-700 hover:text-white transition-all">
-            About Me
+            Personal Information
         </a>
         <a href="achievements.html" class="px-4 py-2 rounded-lg bg-slate-800 text-teal-300 hover:bg-teal-700 hover:text-white transition-all">
             Achievements
         </a>
         <a href="family.html" class="px-4 py-2 rounded-lg bg-sky-500 text-slate-900 border border-sky-300 font-bold">
-            Family
+            Family and Friends
         </a>
     </nav>
 
@@ -207,10 +213,10 @@
         <!-- Upper Middle Header -->
         <div class="family-header">
             <div class="sub-title">Personal Portfolio</div>
-            <h2>MY FAMILY</h2>
+            <h2>Family and Friends</h2>
         </div>
 
-        <!-- Equal Size Cards Grid -->
+        <!-- Cards Grid -->
         <div class="family-grid">
             <!-- Papa's Box -->
             <div class="family-card">
@@ -231,6 +237,17 @@
                 <div class="card-caption">
                     <h3>Mother & Son</h3>
                     <span>With My Mama</span>
+                </div>
+            </div>
+
+            <!-- Friends Box (Placed in the middle underneath) -->
+            <div class="family-card full-width">
+                <div class="photo-wrapper">
+                    <img src="freinds.jpg" alt="With My Friends">
+                </div>
+                <div class="card-caption">
+                    <h3>My Circle</h3>
+                    <span>With My Friends</span>
                 </div>
             </div>
         </div>
