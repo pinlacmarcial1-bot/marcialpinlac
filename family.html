@@ -24,20 +24,25 @@
             font-family: 'Plus Jakarta Sans', sans-serif;
             background-color: #0b1a20;
             color: #ffffff;
-            min-height: 100vh;
+            height: 100vh;
+            overflow: hidden;
         }
 
         .family-container {
             width: 100%;
-            max-width: 900px;
+            max-width: 1000px;
+            max-height: calc(100vh - 88px);
             background: linear-gradient(145deg, #102730 0%, #061116 100%);
-            border: 1px solid rgba(56, 189, 248, 0.2);
-            border-radius: 24px;
-            padding: 50px 40px;
+            border: 1px solid rgba(56, 189, 248, 0.28);
+            border-radius: 20px;
+            padding: 20px 28px;
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7),
                         inset 0 1px 1px rgba(255, 255, 255, 0.1);
             position: relative;
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         /* Ambient background glow */
@@ -47,38 +52,38 @@
             top: -100px;
             left: 50%;
             transform: translateX(-50%);
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+            width: 320px;
+            height: 320px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.18) 0%, rgba(0, 0, 0, 0) 70%);
             pointer-events: none;
         }
 
         /* Upper Middle Header */
         .family-header {
             text-align: center;
-            margin-bottom: 45px;
+            margin-bottom: 14px;
             position: relative;
         }
 
         .family-header .sub-title {
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             text-transform: uppercase;
-            letter-spacing: 4px;
+            letter-spacing: 3.5px;
             color: #38bdf8;
-            font-weight: 600;
-            margin-bottom: 8px;
+            font-weight: 700;
+            margin-bottom: 2px;
         }
 
         .family-header h2 {
             font-family: 'Cinzel', serif;
-            font-size: 2.4rem;
+            font-size: 1.65rem;
             font-weight: 700;
-            letter-spacing: 3px;
+            letter-spacing: 2.5px;
             color: #ffffff;
             text-transform: uppercase;
             display: inline-block;
             position: relative;
-            padding-bottom: 12px;
+            padding-bottom: 6px;
         }
 
         .family-header h2::after {
@@ -87,65 +92,80 @@
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
+            width: 85px;
+            height: 2.5px;
             background: linear-gradient(90deg, transparent, #38bdf8, transparent);
             border-radius: 2px;
         }
 
         .family-grid {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 30px;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+            flex: 1;
+            min-height: 0;
         }
 
         .family-card {
-            flex: 1;
-            min-width: 280px;
-            max-width: 380px;
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 255, 255, 0.07);
-            border-radius: 16px;
-            padding: 20px;
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(56, 189, 248, 0.18);
+            border-radius: 14px;
+            padding: 10px 12px;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
             position: relative;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Full width style for the bottom card to center it nicely underneath */
-        .family-card.full-width {
-            max-width: 500px;
-            flex-basis: 100%;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 0;
         }
 
         .family-card:hover {
-            transform: translateY(-8px);
-            background: rgba(255, 255, 255, 0.05);
-            border-color: rgba(56, 189, 248, 0.4);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5),
-                        0 0 20px rgba(56, 189, 248, 0.15);
+            transform: translateY(-3px);
+            background: rgba(56, 189, 248, 0.06);
+            border-color: rgba(56, 189, 248, 0.65);
+            box-shadow: 0 14px 30px rgba(0, 0, 0, 0.45),
+                        0 0 18px rgba(56, 189, 248, 0.2);
         }
 
-        /* Fixed image framing for exact equal dimensions */
+        /* Highlight badge on top-left of photo */
+        .role-badge {
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            z-index: 2;
+            background: rgba(6, 17, 22, 0.85);
+            border: 1px solid rgba(56, 189, 248, 0.6);
+            color: #7dd3fc;
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 2px 8px;
+            border-radius: 999px;
+            backdrop-filter: blur(4px);
+        }
+
+        /* Compact image framing to fit 2x2 grid on one screen */
         .photo-wrapper {
             width: 100%;
-            height: 320px; /* Locked identical height */
-            border-radius: 12px;
+            flex: 1;
+            min-height: 115px;
+            max-height: 175px;
+            border-radius: 10px;
             overflow: hidden;
             background-color: #050d11;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.12);
             position: relative;
         }
 
         .photo-wrapper img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Auto-crop to equalize photo dimensions */
-            object-position: center;
+            object-fit: cover;
+            object-position: center top;
             display: block;
-            transition: transform 0.5s ease;
+            transition: transform 0.4s ease;
         }
 
         .family-card:hover .photo-wrapper img {
@@ -153,57 +173,48 @@
         }
 
         .card-caption {
-            margin-top: 18px;
+            margin-top: 8px;
             text-align: center;
+            flex-shrink: 0;
         }
 
         .card-caption h3 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: #f8fafc;
-            letter-spacing: 0.5px;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: 0.4px;
+            line-height: 1.2;
         }
 
         .card-caption span {
-            display: block;
-            font-size: 0.85rem;
+            display: inline-block;
+            font-size: 0.72rem;
             color: #38bdf8;
+            background: rgba(56, 189, 248, 0.12);
+            padding: 2px 10px;
+            border-radius: 999px;
             margin-top: 4px;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
-            font-weight: 500;
-        }
-
-        /* Mobile Responsive View */
-        @media (max-width: 680px) {
-            .family-container {
-                padding: 35px 20px;
-            }
-
-            .family-header h2 {
-                font-size: 1.8rem;
-            }
-
-            .photo-wrapper {
-                height: 260px;
-            }
+            letter-spacing: 1.2px;
+            font-weight: 700;
+            line-height: 1.2;
         }
     </style>
 </head>
-<body class="flex flex-col items-center justify-center p-6 md:p-10 relative">
+<body class="flex flex-col items-center justify-center px-4 py-3 relative">
 
     <!-- NAVIGATION MENU -->
-    <nav class="w-full max-w-[900px] flex justify-end gap-3 font-semibold mb-6 z-20">
-        <a href="index.html" class="px-4 py-2 rounded-lg bg-slate-800 text-teal-300 hover:bg-teal-700 hover:text-white transition-all">
+    <nav class="w-full max-w-[1000px] flex justify-end gap-2 font-semibold mb-3 z-20 shrink-0 text-sm">
+        <a href="index.html" class="px-3.5 py-1.5 rounded-lg bg-slate-800 text-teal-300 hover:bg-teal-700 hover:text-white transition-all">
             Home
         </a>
-        <a href="about.html" class="px-4 py-2 rounded-lg bg-slate-800 text-teal-300 hover:bg-teal-700 hover:text-white transition-all">
+        <a href="about.html" class="px-3.5 py-1.5 rounded-lg bg-slate-800 text-teal-300 hover:bg-teal-700 hover:text-white transition-all">
             Personal Information
         </a>
-        <a href="achievements.html" class="px-4 py-2 rounded-lg bg-slate-800 text-teal-300 hover:bg-teal-700 hover:text-white transition-all">
+        <a href="achievements.html" class="px-3.5 py-1.5 rounded-lg bg-slate-800 text-teal-300 hover:bg-teal-700 hover:text-white transition-all">
             Achievements
         </a>
-        <a href="family.html" class="px-4 py-2 rounded-lg bg-sky-500 text-slate-900 border border-sky-300 font-bold">
+        <a href="family.html" class="px-3.5 py-1.5 rounded-lg bg-sky-500 text-slate-900 border border-sky-300 font-bold">
             Family and Friends
         </a>
     </nav>
@@ -212,19 +223,20 @@
     <div class="family-container">
         <!-- Upper Middle Header -->
         <div class="family-header">
-            <div class="sub-title">Personal Portfolio</div>
+            <div class="sub-title">Personal Portfolio // Family &amp; Circle</div>
             <h2>Family and Friends</h2>
         </div>
 
-        <!-- Cards Grid -->
+        <!-- 2x2 Cards Grid -->
         <div class="family-grid">
             <!-- Papa's Box -->
             <div class="family-card">
                 <div class="photo-wrapper">
+                    <span class="role-badge">Father</span>
                     <img src="papa.jpg" alt="Me with Papa">
                 </div>
                 <div class="card-caption">
-                    <h3>Father & Son</h3>
+                    <h3>Father &amp; Son</h3>
                     <span>With My Papa</span>
                 </div>
             </div>
@@ -232,10 +244,11 @@
             <!-- Mama's Box -->
             <div class="family-card">
                 <div class="photo-wrapper">
+                    <span class="role-badge">Mother</span>
                     <img src="mama.jpg" alt="Me with Mama">
                 </div>
                 <div class="card-caption">
-                    <h3>Mother & Son</h3>
+                    <h3>Mother &amp; Son</h3>
                     <span>With My Mama</span>
                 </div>
             </div>
@@ -243,6 +256,7 @@
             <!-- My Siblings Box -->
             <div class="family-card">
                 <div class="photo-wrapper">
+                    <span class="role-badge">Siblings</span>
                     <img src="Gemini_Generated_Image_x5w0nmx5w0nmx5w0.jpeg" alt="Me with My Siblings">
                 </div>
                 <div class="card-caption">
@@ -251,12 +265,11 @@
                 </div>
             </div>
 
-            <!-- Friends Box (Placed underneath) -->
-            <div class="family-card full-width" style="max-width: 790px;">
-                <div style="display: flex; flex-wrap: wrap; gap: 15px;">
-                    <div class="photo-wrapper" style="flex: 1; min-width: 220px;">
-                        <img src="freinds.jpg" alt="With My Friends">
-                    </div>
+            <!-- Friends Box -->
+            <div class="family-card">
+                <div class="photo-wrapper">
+                    <span class="role-badge">Friends</span>
+                    <img src="freinds.jpg" alt="With My Friends">
                 </div>
                 <div class="card-caption">
                     <h3>My Circle</h3>
