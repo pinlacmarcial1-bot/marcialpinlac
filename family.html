@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
-- {
+        * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
@@ -114,9 +114,9 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
 
-        /* Full width style for the middle card to center it nicely underneath */
+        /* Full width style for the bottom card to center it nicely underneath */
         .family-card.full-width {
-            max-width: 500px;
+            max-width: 790px;
             flex-basis: 100%;
         }
 
@@ -240,8 +240,19 @@
                 </div>
             </div>
 
-            <!-- Friends Box (Placed in the middle underneath) -->
-            <div class="family-card full-width" style="max-width: 790px;">
+            <!-- Sibling's Box -->
+            <div class="family-card">
+                <div class="photo-wrapper">
+                    <img src="sibling.jpg" alt="Me with My Sibling">
+                </div>
+                <div class="card-caption">
+                    <h3>Siblings Bond</h3>
+                    <span>With My Sibling</span>
+                </div>
+            </div>
+
+            <!-- Friends Box (Placed underneath) -->
+            <div class="family-card full-width">
                 <div style="display: flex; flex-wrap: wrap; gap: 15px;">
                     <div class="photo-wrapper" style="flex: 1; min-width: 220px;">
                         <img src="freinds.jpg" alt="With My Friends">
